@@ -1,109 +1,317 @@
-<!DOCTYPE html><html lang="ar" dir="rtl">
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#09090f">
-<title>INSTA BOOST | طوّر حسابك</title>
+<meta name="theme-color" content="#090914">
+<title>INSTA BOOST</title>
 <style>
-:root{--bg:#09090f;--panel:#14141f;--purple:#a855f7;--pink:#ec4899;--text:#f7f5ff;--muted:#aaa6bd}
+:root{--bg:#090914;--panel:#151526;--pink:#ff3c9e;--purple:#8b5cf6;--text:#f8f7ff;--muted:#b7b5cc;--line:#302c48}
 *{box-sizing:border-box}
-body{margin:0;background:radial-gradient(ellipse at top,#25103d 0,#09090f 48%);color:var(--text);font-family:Arial,Tahoma,sans-serif;line-height:1.7}
-header{padding:20px 16px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #ffffff12;position:sticky;top:0;background:#09090feF;backdrop-filter:blur(12px);z-index:5}
-.logo{font-weight:900;font-size:21px;letter-spacing:1px}.logo span{color:#d28aff}
-.tag{font-size:11px;border:1px solid #a855f755;color:#d8b4fe;border-radius:30px;padding:5px 9px}
-main{max-width:760px;margin:auto;padding:24px 16px 60px}
-.hero{text-align:center;padding:35px 8px 28px}
-.eyebrow{display:inline-block;color:#e9d5ff;background:#a855f71c;border:1px solid #a855f744;padding:5px 12px;border-radius:30px;font-size:12px}
-h1{font-size:clamp(34px,8vw,55px);line-height:1.2;margin:18px 0 12px;font-weight:900}
-.gradient{background:linear-gradient(90deg,#c084fc,#f0abfc,#fb7185);background-clip:text;-webkit-background-clip:text;color:transparent}
-.hero p{color:var(--muted);max-width:490px;margin:0 auto 22px}
-.btn{border:0;border-radius:12px;padding:13px 18px;font-size:15px;font-weight:bold;cursor:pointer;display:inline-block}
-.primary{background:linear-gradient(100deg,#9333ea,#db2777);color:white;box-shadow:0 8px 25px #a855f72a}
-.secondary{background:#ffffff0b;color:#fff;border:1px solid #ffffff20}
-.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:15px 0 28px}
-.stat,.card{background:linear-gradient(145deg,#171522,#11111a);border:1px solid #ffffff12;border-radius:17px;padding:16px}
-.stat{text-align:center}.stat strong{display:block;font-size:23px;color:#d8b4fe}.stat span{font-size:11px;color:var(--muted)}
-.section-title{font-size:23px;margin:28px 0 5px}.sub{color:var(--muted);font-size:13px;margin:0 0 16px}
-.card{margin-bottom:13px}.card h3{margin:0 0 5px;font-size:17px}.card p{color:var(--muted);font-size:13px;margin:0}
-.icon{font-size:24px;margin-bottom:5px}
-.progress-head{display:flex;justify-content:space-between;font-size:13px;margin:12px 0 8px}
-.track{height:8px;border-radius:20px;background:#ffffff12;overflow:hidden}.fill{height:100%;width:0;background:linear-gradient(90deg,#9333ea,#ec4899);transition:width .3s}
-.task{display:flex;align-items:flex-start;gap:10px;padding:12px 0;border-bottom:1px solid #ffffff12}
-.task:last-child{border:0}.task input{accent-color:#c084fc;width:18px;height:18px;margin-top:5px;flex-shrink:0}
-.task label{font-size:14px;cursor:pointer}.task small{display:block;color:var(--muted);font-size:12px}
-.field{display:block;width:100%;padding:12px;background:#0b0b13;border:1px solid #ffffff20;border-radius:10px;color:#fff;font-size:15px;margin:7px 0 14px}
-label.formlabel{font-size:13px;color:#d5cfe6}
-.tips{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.tip{padding:14px;border-radius:13px;background:#a855f710;border:1px solid #a855f729;font-size:13px}
-footer{text-align:center;color:#777187;font-size:12px;border-top:1px solid #ffffff12;padding:24px 10px}
-@media(max-width:420px){.stats{gap:7px}.stat{padding:12px 5px}.stat strong{font-size:20px}.tips{grid-template-columns:1fr}}
+body{margin:0;background:radial-gradient(circle at top,#21133b,var(--bg) 48%);color:var(--text);font-family:Arial,sans-serif;line-height:1.7}
+header{text-align:center;padding:30px 15px 20px}
+.logo{font-size:30px;font-weight:900;color:var(--pink);letter-spacing:1px}
+header p,.muted{color:var(--muted)}
+main{width:min(900px,94%);margin:auto}
+section{background:rgba(21,21,38,.96);border:1px solid var(--line);border-radius:18px;padding:18px;margin:15px 0;box-shadow:0 8px 30px #0002}
+h2{font-size:21px;margin:0 0 12px;color:#ff77ba}
+h3{margin:5px 0;color:#fff}
+p{margin:7px 0}
+.stats,.controls,.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.stat,.idea{background:#0e0e1c;border:1px solid var(--line);border-radius:13px;padding:13px}
+.stat strong{display:block;color:var(--pink);font-size:24px}
+label{display:block;margin:10px 0 5px}
+input,select,textarea{width:100%;padding:12px;border:1px solid #47405f;border-radius:10px;background:#0c0c19;color:white;font-size:15px}
+button{border:0;border-radius:10px;padding:11px 15px;background:linear-gradient(100deg,var(--purple),var(--pink));color:white;font-size:15px;font-weight:bold;cursor:pointer;margin-top:10px}
+button.secondary{background:#292640;border:1px solid #51466d}
+button:active{transform:scale(.98)}
+.full{width:100%}
+.task{display:flex;align-items:flex-start;gap:10px;padding:9px 0;border-bottom:1px solid var(--line)}
+.task input{width:auto;margin-top:7px;accent-color:var(--pink)}
+.task label{margin:0}
+progress{width:100%;height:12px;accent-color:var(--pink)}
+.idea{margin:0;min-width:0}
+.idea .tag{display:inline-block;background:#302044;color:#ffacd5;border-radius:20px;padding:3px 9px;font-size:12px}
+.idea p{overflow-wrap:anywhere}
+.idea .copy{width:100%}
+.notice{font-size:13px;color:var(--muted)}
+footer{text-align:center;padding:20px;color:var(--muted);font-size:13px}
+@media(max-width:620px){.stats,.controls,.grid{grid-template-columns:1fr}.logo{font-size:26px}section{padding:14px}}
 </style>
 </head>
 <body>
-<header><div class="logo">INSTA <span>BOOST</span></div><div class="tag">نمو ذكي • خطوة بخطوة</div></header>
+<header>
+  <div class="logo">INSTA BOOST 🚀</div>
+  <p>نظّم خدمتك وطوّر محتواك على إنستغرام</p>
+</header>
+
 <main>
-<section class="hero">
-<div class="eyebrow">✨ بدا رحلتك نحو محتوى أفضل</div>
-<h1>كبّر حضورك<br><span class="gradient">على إنستغرام</span></h1>
-<p>أدوات بسيطة وخطة يومية تساعدك تحسّن محتواك، توصل لجمهور مناسب، وتتابع تطور حسابك بانتظام.</p>
-<button class="btn primary" onclick="document.getElementById('plan').scrollIntoView({behavior:'smooth'})">ابدأ خطة النمو ↓</button>
-</section>
-<section class="stats">
-<div class="stat"><strong id="days">0/5</strong><span>مهام اليوم</span></div>
-<div class="stat"><strong id="streak">0</strong><span>أيام النشاط</span></div>
-<div class="stat"><strong id="score">0%</strong><span>إنجاز اليوم</span></div>
-</section>
-<section class="card">
-<h2 class="section-title" style="margin-top:0">📊 تتبّع حسابك</h2>
-<p>دخل الأرقام يدوياً باش تتابع التغيير ديال حسابك. هاد الأداة ما كتدخلش لحساب إنستغرام ديالك.</p>
-<label class="formlabel" for="followers">عدد المتابعين الحالي</label>
-<input class="field" id="followers" type="number" min="0" placeholder="مثال: 1250">
-<label class="formlabel" for="posts">عدد المنشورات أو Reels هاد الأسبوع</label>
-<input class="field" id="posts" type="number" min="0" placeholder="مثال: 4">
-<button class="btn primary" onclick="saveStats()">حفظ الإحصائيات</button>
-<p id="statsMessage" style="margin-top:10px"></p>
-</section>
-<section id="plan">
-<h2 class="section-title">🗓️ خطة النمو اليومية</h2>
-<p class="sub">كمّل المهام بالتدريج، والتقدم ديالك كيتحفظ على هاد الجهاز.</p>
-<div class="card">
-<div class="progress-head"><span>تقدم اليوم</span><strong id="progressText">0 من 5</strong></div>
-<div class="track"><div class="fill" id="progressFill"></div></div>
-<div id="tasks">
-<div class="task"><input type="checkbox" id="t0"><label for="t0">نشر Reel مفيد أو ممتع<small>بدا بلقطة جذابة فالثواني الأولى.</small></label></div>
-<div class="task"><input type="checkbox" id="t1"><label for="t1">كتابة وصف واضح<small>استعمل كلمات مرتبطة بموضوع الفيديو.</small></label></div>
-<div class="task"><input type="checkbox" id="t2"><label for="t2">التفاعل مع جمهورك<small>جاوب على التعليقات برسائل حقيقية.</small></label></div>
-<div class="task"><input type="checkbox" id="t3"><label for="t3">التفاعل مع 5 حسابات من نفس المجال<small>بلا رسائل مزعجة أو تعليقات آلية.</small></label></div>
-<div class="task"><input type="checkbox" id="t4"><label for="t4">مراجعة نتائج المحتوى السابق<small>شوف المشاهدات والحفظ والمشاركات.</small></label></div>
-</div>
-<button class="btn secondary" onclick="resetTasks()" style="margin-top:15px">إعادة ضبط مهام اليوم</button>
-</div>
-</section>
 <section>
-<h2 class="section-title">🚀 نصائح عملية للنمو</h2>
-<p class="sub">ركّز على المحتوى المفيد والاستمرارية، ماشي على الأرقام فقط.</p>
-<div class="tips">
-<div class="tip">🎬 <strong>Reels</strong><br>خلي بداية الفيديو مشوقة ووصل الفكرة بسرعة.</div>
-<div class="tip">🎯 <strong>تخصص واضح</strong><br>اختار موضوعاً يفهم الجمهور علاش يتابعك.</div>
-<div class="tip">📅 <strong>استمرارية</strong><br>نشر منتظم تقدر تحافظ عليه أفضل من الاندفاع.</div>
-<div class="tip">📈 <strong>تحليل النتائج</strong><br>عاود جرّب الأفكار اللي جابت تفاعلاً حقيقياً.</div>
-</div>
+  <h2>📊 الإحصائيات ديالك</h2>
+  <div class="stats">
+    <div class="stat"><span>الأيام المتتالية</span><strong id="days">0</strong></div>
+    <div class="stat"><span>المتابعون</span><strong id="streak">0</strong></div>
+    <div class="stat"><span>المنشورات</span><strong id="score">0</strong></div>
+  </div>
+  <div class="controls">
+    <div><label for="followers">عدد المتابعين</label><input id="followers" type="number" min="0" placeholder="مثلاً 500"></div>
+    <div><label for="posts">عدد المنشورات</label><input id="posts" type="number" min="0" placeholder="مثلاً 20"></div>
+    <div style="align-self:end"><button class="full" onclick="saveStats()">حفظ الإحصائيات</button></div>
+  </div>
+  <p class="notice">الأرقام كتدخلها نتا يدوياً، وماشي إحصائيات مباشرة من إنستغرام.</p>
 </section>
-<section class="card" style="margin-top:25px">
-<h2 style="margin-top:0">🔒 خدمات إضافية قريباً</h2>
-<p>كنوجدو موارد وقوالب أكثر لمساعدة صناع المحتوى. الأداء وتفعيل أي محتوى مدفوع غادي يكونو واضحين قبل الإطلاق.</p>
+
+<section>
+  <h2>💡 مولّد أفكار الريلز والمنشورات</h2>
+  <p>اختار المجال ونوع المحتوى، وغادي تحصل على 3 أفكار تقدر تستعملها وتطوّرها.</p>
+  <div class="controls">
+    <div>
+      <label for="ideaCategory">المجال</label>
+      <select id="ideaCategory">
+        <option value="gaming">🎮 الألعاب</option>
+        <option value="football">⚽ كرة القدم</option>
+        <option value="comedy">😂 الكوميديا</option>
+        <option value="education">📚 التعليم والنصائح</option>
+        <option value="lifestyle">📸 الحياة اليومية</option>
+        <option value="business">💼 التجارة والتسويق</option>
+        <option value="food">🍔 المأكولات</option>
+      </select>
+    </div>
+    <div>
+      <label for="ideaType">نوع المحتوى</label>
+      <select id="ideaType">
+        <option value="reel">ريلز (Reels)</option>
+        <option value="post">منشور (Post)</option>
+      </select>
+    </div>
+    <div style="align-self:end"><button class="full" onclick="generateIdeas()">🎲 ولّد الأفكار</button></div>
+  </div>
+  <p class="notice">المولّد مجاني ويخدم بلا إنترنت بعد فتح الصفحة. الأفكار مبنية على قوالب داخل الموقع، ماشي ذكاء اصطناعي مباشر.</p>
+  <div id="ideas" class="grid" style="margin-top:14px"></div>
+</section>
+
+<section>
+  <h2>✅ المهام اليومية</h2>
+  <p>كمّل المهام باش تنظّم خدمتك كل نهار.</p>
+  <progress id="progress" value="0" max="5"></progress>
+  <p id="progressText" class="muted">كمل 0 من 5 مهام</p>
+  <div class="task"><input type="checkbox" id="t0" onchange="updateProgress()"><label for="t0">نشر محتوى مفيد أو ترفيهي بجودة مزيانة.</label></div>
+  <div class="task"><input type="checkbox" id="t1" onchange="updateProgress()"><label for="t1">الرد على التعليقات والرسائل.</label></div>
+  <div class="task"><input type="checkbox" id="t2" onchange="updateProgress()"><label for="t2">التفاعل الحقيقي مع حسابات من نفس المجال.</label></div>
+  <div class="task"><input type="checkbox" id="t3" onchange="updateProgress()"><label for="t3">تحضير فكرة جديدة للمحتوى القادم.</label></div>
+  <div class="task"><input type="checkbox" id="t4" onchange="updateProgress()"><label for="t4">مراجعة أداء المحتوى والتعلّم من النتائج.</label></div>
+  <button class="secondary" onclick="resetTasks()">إعادة تعيين المهام</button>
+</section>
+
+<section>
+  <h2>📈 نصائح للنمو</h2>
+  <p>• اختار مجالاً واضحاً وخليك مستمر فيه.</p>
+  <p>• اهتم بأول ثانيتين في الريلز لجذب الانتباه.</p>
+  <p>• استعمل فيديوهات وصوراً من صنعك أو عندك الحق في استعمالها.</p>
+  <p>• جاوب المتابعين وتعلّم من الإحصائيات الحقيقية.</p>
+  <p>• تجنّب شراء المتابعين والتفاعل الوهمي، لأنه يقدر يضر الحساب.</p>
+</section>
+
+<section>
+  <h2>✨ خدمات إضافية</h2>
+  <p>أفكار أكثر وأدوات جديدة يمكن إضافتها مستقبلاً.</p>
+  <p class="notice">الموقع مستقل عن إنستغرام، ولا يطلب كلمة السر ديالك.</p>
 </section>
 </main>
-<footer>INSTA BOOST © 2026 — أدوات للتعلم وتحسين المحتوى<br>لا نضمن عدداً معيناً من المتابعين أو التفاعل.</footer>
+
+<footer>INSTA BOOST © 2026 — أداة مجانية لتنظيم أفكار المحتوى</footer>
+
 <script>
-const taskIds=['t0','t1','t2','t3','t4'];
-function loadTasks(){taskIds.forEach(id=>{document.getElementById(id).checked=localStorage.getItem('ib_'+id)==='1';document.getElementById(id).addEventListener('change',()=>{localStorage.setItem('ib_'+id,document.getElementById(id).checked?'1':'0');updateProgress()})});document.getElementById('followers').value=localStorage.getItem('ib_followers')||'';document.getElementById('posts').value=localStorage.getItem('ib_posts')||'';updateProgress()}
-function updateProgress(){let n=taskIds.filter(id=>document.getElementById(id).checked).length;document.getElementById('days').textContent=n+'/5';document.getElementById('score').textContent=Math.round(n/5*100)+'%';document.getElementById('progressText').textContent=n+' من 5';document.getElementById('progressFill').style.width=n/5*100+'%';document.getElementById('streak').textContent=n===5?'1':'0'}
-function resetTasks(){taskIds.forEach(id=>{document.getElementById(id).checked=false;localStorage.removeItem('ib_'+id)});updateProgress()}
-function saveStats(){let f=document.getElementById('followers').value,p=document.getElementById('posts').value;if(f!==''&&Number(f)<0||p!==''&&Number(p)<0){document.getElementById('statsMessage').textContent='دخل أرقام صحيحة من فضلك.';return}localStorage.setItem('ib_followers',f);localStorage.setItem('ib_posts',p);document.getElementById('statsMessage').textContent='تم حفظ الإحصائيات على هاد الجهاز بنجاح ✓'}
+const ideaData = {
+gaming: {
+reel: [
+["تحدي مستحيل في اللعبة","واش تقدر تربح هاد التحدي بلا ما تخسر؟","بدا بلقطة مشوقة، شرح التحدي بسرعة، ورّي أحسن محاولة وختم بالنتيجة.","#Gaming #Gamer #تحدي"],
+["أفضل لحظة اليوم","شوفو شنو وقع ليا فآخر لحظة!","استعمل لقطة قوية من اللعب، زِد تعليقاً قصيراً، وخلي النهاية مفاجئة.","#GamingClips #ألعاب #ريلز"],
+["3 أخطاء كيديروها اللاعبين","إلا كنت كتدير هاد الأخطاء، جرّب تبدل طريقتك.","عرض 3 أخطاء مع مثال بسيط وحل لكل واحد.","#GamingTips #نصائح #Gaming"]
+],
+post: [
+["أفضل 3 ألعاب عندي","شنو هي اللعبة المفضلة عندك؟","حط صوراً من ثلاث ألعاب وكتب سبب اختيار كل لعبة. طلب من الناس يشاركو اختياراتهم.","#Gaming #ألعاب #Gamers"],
+["إعداداتي المفضلة","هادي هي الإعدادات اللي كنفضّل فاللعب.","شارك الإعدادات ديالك مع شرح قصير لكل اختيار.","#GamingSetup #GamingTips"],
+["تقييم لعبة","تعطي هاد اللعبة شحال من 10؟","كتب رأيك فالغرافيك وطريقة اللعب والمتعة، وخلي الجمهور يعطي تقييمه.","#GameReview #Gaming"]
+]},
+football: {
+reel: [
+["تحدي ضربات الجزاء","شحال من ضربة تقدر تسجّل من أصل 5؟","صوّر خمس محاولات، بيّن النتيجة، وتحدّى المتابعين يجربوها.","#Football #كرة_القدم #Challenge"],
+["مهارة كروية بسيطة","جرّب هاد المهارة فالملعب وصوّر النتيجة.","شرح الحركة ببطء ثم عرضها بالسرعة العادية.","#FootballSkills #مهارات #Soccer"],
+["مقارنة لاعبين","إلى خاصك تختار لاعب واحد، شكون تختار وعلاش؟","قارن بين لاعبين حسب المهارة والتمرير والتسجيل، وخلي القرار للجمهور.","#Football #كرة_القدم #FootballFans"]
+],
+post: [
+["تشكيلة الأحلام","اختار أفضل 11 لاعب عندك.","صمّم تشكيلة واطلب من المتابعين يقترحو تغييرات.","#Football #تشكيلة #Soccer"],
+["لحظة كروية لا تُنسى","شنو هي أحسن لحظة كروية عندك؟","شارك صورة أو رسماً من تصميمك واحكِ علاش هاد اللحظة مميزة.","#FootballMemories #كرة_القدم"],
+["توقع نتيجة المباراة","شنو توقعك للنتيجة؟","اكتب الفريقين وموعد المباراة، واطلب من الناس يتوقعو النتيجة.","#MatchDay #Football"]
+]},
+comedy: {
+reel: [
+["أنا قبل الامتحان وبعده","واش حتى نتا كتوقع ليك هادي؟","مثّل جوج شخصيات أو جوج حالات باستعمال انتقال بسيط ومضحك.","#Comedy #ضحك #Relatable"],
+["ملي تقول غير خمس دقايق","خمس دقايق اللي كتولي ساعة كاملة!","مثّل الموقف بتعابير الوجه وردود فعل مبالغ فيها بشكل طريف.","#FunnyReels #كوميديا"],
+["توقعات vs الواقع","كنت متوقع شي حاجة ووقع العكس تماماً.","قسّم الفيديو لجوج أجزاء: التوقع والواقع بطريقة مفاجئة.","#ExpectationVsReality #ضحك"]
+],
+post: [
+["ميم من الحياة اليومية","شكون كيعرف هاد الإحساس؟","صمّم ميم أصلي على موقف يومي كيوقع لكثير من الناس.","#Memes #ضحك #Comedy"],
+["اختار الموقف المضحك","A ولا B؟ شنو الأكثر ضحكاً؟","حط صورتين أو وصفين لموقفين طريفين واطلب التصويت.","#Funny #ميمز"],
+["جملة كتضحك صحابك","منشن صاحبك اللي ديما كيدير هادشي.","اكتب موقفاً قصيراً ومضحكاً من الحياة اليومية بلا إحراج أي شخص.","#Friends #Comedy"]
+]},
+education: {
+reel: [
+["3 معلومات فـ 20 ثانية","هادي 3 معلومات ممكن ما كنتيش عارفها.","قدّم ثلاث معلومات صحيحة ومختصرة مع كتابة واضحة على الشاشة.","#LearnOnInstagram #معلومات #تعلم"],
+["شرح حاجة صعيبة بسهولة","نشرحها ليك بطريقة بسيطة.","اختار مفهوماً واحداً، شرحو بمثال من الحياة، وختم بخلاصة.","#Education #نصائح #تعلم"],
+["خطأ شائع وتصحيحه","كتدير هاد الخطأ بلا ما تنتبه؟","وضح الخطأ، سبب وقوعه، والطريقة الصحيحة لتجنّبه.","#Tips #تعليم #معلومة"]
+],
+post: [
+["5 نصائح مفيدة","حفظ المنشور باش ترجع ليه من بعد.","اكتب خمس نصائح عملية فتصميم مرتب وسهل القراءة.","#Tips #نصائح #تعلم"],
+["قبل وبعد التعلّم","شنو تبدل ملي تعلمت هاد المهارة؟","شارك تجربة حقيقية مع الخطوات اللي ساعدتك.","#Learning #تطوير_الذات"],
+["سؤال وجواب","كتب سؤالك فالتعليقات.","اختار سؤالاً من مجالك وجاوب عليه بطريقة واضحة ومختصرة.","#QandA #تعليم"]
+]},
+lifestyle: {
+reel: [
+["نهار من حياتي","ها كيفاش كيدوز نهاري.","صوّر لقطات قصيرة من يومك ورتّبها مع موسيقى مناسبة.","#DailyVlog #يومياتي #Lifestyle"],
+["ترتيب المكان","شوفو الفرق قبل ومن بعد.","صوّر المكان قبل الترتيب ثم خطوات التغيير والنتيجة.","#BeforeAndAfter #تنظيم"],
+["3 حاجات كنستعمل كل نهار","هادو من الحاجات اللي كيسهلو عليا نهاري.","ورّي ثلاث حاجات كتستعملها فعلاً وشرح علاش كتفيدك.","#Lifestyle #DailyRoutine"]
+],
+post: [
+["صور الأسبوع","شنو هي الصورة المفضلة عندك؟","جمع صوراً أصلية من أسبوعك فمعرض صغير مرتب.","#PhotoDump #يومياتي"],
+["روتيني المفضل","شنو العادة اللي كتعاونك فنهارك؟","شارك روتيناً واقعياً وبسيطاً مع سؤال للمتابعين.","#Routine #Lifestyle"],
+["مكان كنحبه","واش سبق ليك زرتي هاد المكان؟","شارك صورة لمكان زرتيه ووصفاً قصيراً لتجربتك.","#Travel #أماكن"]
+]},
+business: {
+reel: [
+["غلطة فالتسويق","تجنب هاد الغلطة ملي كتسوّق لمنتجك.","شرح غلطة شائعة بمثال واضح واقتراح حل عملي.","#Marketing #تجارة #Business"],
+["كيفاش كنوجد منتج","من الفكرة حتى للنتيجة.","عرض مراحل حقيقية من تجهيز المنتج أو الخدمة.","#SmallBusiness #مشروع"],
+["جاوب على سؤال زبون","هاد السؤال كيتعاود بزاف.","اختار سؤالاً متكرراً وجاوب عليه بوضوح وباختصار.","#CustomerService #تسويق"]
+],
+post: [
+["تعريف بمنتج","شنو أكثر ميزة كتعجبك فهاد المنتج؟","حط صورة واضحة، وصفاً صادقاً، الثمن إن كان مناسباً، وطريقة التواصل.","#Product #مشروع #Business"],
+["نصيحة لأصحاب المشاريع","بدا بخطوة صغيرة وواضحة.","شارك نصيحة عملية من تجربة حقيقية أو مصدر موثوق.","#Entrepreneur #مشاريع"],
+["أسئلة شائعة","جمعنا ليكم أجوبة على أسئلتكم.","جاوب على 3 أسئلة حول منتجك أو خدمتك بطريقة منظمة.","#FAQ #خدمات"]
+]},
+food: {
+reel: [
+["وصفة سهلة","ها وصفة بسيطة تقدر توجدها فالدار.","صوّر المكونات والخطوات والنتيجة النهائية بوضوح.","#Food #وصفات #Cooking"],
+["تقديم الطبق","شوفو النتيجة النهائية!","صوّر مراحل التقديم وركّز على تفاصيل الطبق والإضاءة.","#FoodReels #طبخ"],
+["تجربة مذاق","واش تستاهل التجربة؟","جرّب وصفة أو منتجاً بصدق، وشرح الطعم والثمن إن كان مناسباً.","#FoodReview #تجربة"]
+],
+post: [
+["وصفة بالمقادير","حفظ الوصفة باش تجربها.","شارك صورة أصلية ومقادير دقيقة وخطوات التحضير.","#Recipe #وصفات"],
+["طبقك المفضل","شنو الطبق اللي كتفضّل؟","انشر صورة واضحة للطبق واطلب اقتراحات من الجمهور.","#FoodLovers #أكل"],
+["نصائح للمطبخ","ها 3 نصائح كتسهّل عليك التحضير.","شارك نصائح عملية ومجرّبة مع صور أو رسومات بسيطة.","#KitchenTips #طبخ"]
+]}
+};
+
+let generatedIdeas = [];
+
+function generateIdeas(){
+  const category = document.getElementById("ideaCategory").value;
+  const type = document.getElementById("ideaType").value;
+  const list = ideaData[category][type].slice();
+  for(let i=list.length-1;i>0;i--){
+    const j=Math.floor(Math.random()*(i+1));
+    [list[i],list[j]]=[list[j],list[i]];
+  }
+  generatedIdeas=list;
+  const container=document.getElementById("ideas");
+  container.innerHTML="";
+  list.forEach((idea,index)=>{
+    const card=document.createElement("article");
+    card.className="idea";
+    const tag=document.createElement("span");
+    tag.className="tag";
+    tag.textContent=type==="reel"?"🎬 فكرة ريلز":"🖼️ فكرة منشور";
+    const title=document.createElement("h3");
+    title.textContent=idea[0];
+    const hook=document.createElement("p");
+    hook.innerHTML="<strong>البداية الجذابة:</strong>";
+    const hookText=document.createElement("p");
+    hookText.textContent=idea[1];
+    const body=document.createElement("p");
+    body.innerHTML="<strong>شنو تدير:</strong>";
+    const details=document.createElement("p");
+    details.textContent=idea[2];
+    const hashtags=document.createElement("p");
+    hashtags.textContent=idea[3];
+    const btn=document.createElement("button");
+    btn.className="copy";
+    btn.textContent="📋 نسخ الفكرة";
+    btn.onclick=()=>copyIdea(index);
+    card.append(tag,title,hook,hookText,body,details,hashtags,btn);
+    container.appendChild(card);
+  });
+}
+
+async function copyIdea(index){
+  const idea=generatedIdeas[index];
+  if(!idea)return;
+  const textToCopy="الفكرة: "+idea[0]+"\nالبداية الجذابة: "+idea[1]+"\nطريقة التنفيذ: "+idea[2]+"\nهاشتاغات: "+idea[3];
+  try{
+    await navigator.clipboard.writeText(textToCopy);
+    alert("تنسخات الفكرة بنجاح ✅");
+  }catch(e){
+    const area=document.createElement("textarea");
+    area.value=textToCopy;
+    document.body.appendChild(area);
+    area.select();
+    const success=document.execCommand("copy");
+    area.remove();
+    if(success)alert("تنسخات الفكرة بنجاح ✅");
+    else prompt("نسخ الفكرة من هنا:",textToCopy);
+  }
+}
+
+function loadTasks(){
+  for(let i=0;i<5;i++){
+    document.getElementById("t"+i).checked=localStorage.getItem("ib_t"+i)==="1";
+  }
+  document.getElementById("followers").value=localStorage.getItem("ib_followers")||"";
+  document.getElementById("posts").value=localStorage.getItem("ib_posts")||"";
+  updateProgress();
+  refreshStats();
+}
+
+function updateProgress(){
+  let done=0;
+  for(let i=0;i<5;i++){
+    const checked=document.getElementById("t"+i).checked;
+    localStorage.setItem("ib_t"+i,checked?"1":"0");
+    if(checked)done++;
+  }
+  document.getElementById("progress").value=done;
+  document.getElementById("progressText").textContent="كمل "+done+" من 5 مهام";
+  refreshStats();
+}
+
+function resetTasks(){
+  if(!confirm("واش بغيتي تعاود المهام من الأول؟"))return;
+  for(let i=0;i<5;i++){
+    document.getElementById("t"+i).checked=false;
+    localStorage.setItem("ib_t"+i,"0");
+  }
+  updateProgress();
+}
+
+function saveStats(){
+  const followers=Math.max(0,Number(document.getElementById("followers").value)||0);
+  const posts=Math.max(0,Number(document.getElementById("posts").value)||0);
+  localStorage.setItem("ib_followers",followers);
+  localStorage.setItem("ib_posts",posts);
+  refreshStats();
+  alert("تحفظات الإحصائيات ✅");
+}
+
+function refreshStats(){
+  let done=0;
+  for(let i=0;i<5;i++)if(localStorage.getItem("ib_t"+i)==="1")done++;
+  document.getElementById("days").textContent=done;
+  document.getElementById("streak").textContent=Number(localStorage.getItem("ib_followers")||0).toLocaleString("en");
+  document.getElementById("score").textContent=Number(localStorage.getItem("ib_posts")||0).toLocaleString("en");
+}
+
 loadTasks();
+generateIdeas();
 </script>
 </body>
 </html>
-
-
